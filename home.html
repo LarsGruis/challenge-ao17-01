@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Koffiebar Chavez</title>
+	<link rel="stylesheet" type="text/css" href="challenge.css">
+	<meta charset="utf-8">
+	
+	<script type="text/javascript">
+	var imagecount = 1;
+	var total = 5;
+	
+	function slide(x) {
+		var Image = document.getElementById('img');
+		imagecount = imagecount + x;
+		if (imagecount > total) { imagecount = 1;}
+		if (imagecount < 1) { imagecount = total;}
+		Image.src = "jobs/img" + imagecount +".jpg";
+	}
+
+	window.setInterval(function slideA() {
+	var Image = document.getElementById('img');
+		imagecount = imagecount + 1;
+		if (imagecount > total) { imagecount = 1;}
+		if (imagecount < 1) { imagecount = total;}
+		Image.src = "jobs/img" + imagecount +".jpg";
+	},5000);
+
+	</script>
+</head>
+<body onload="slideA()">
+	<nav>
+		<li><a href="home.html">Home</a></li>
+		<li><a href="over.html">Over</a></li>
+		<li><a href="jobs.html">Jobs</a></li>
+		<li><a href="contact.html">Contact</a></li>		
+ 	</nav>
+ 	<header><img src="jobs/img1.jpg"></header>
+ 	<div id="container">
+ 		<img src="jobs/img4.jpg" id="img">
+ 		<div id="left-holder"><img onclick="slide(-1)" class="left" src="leftarrow.png"></div>
+ 		<div id="right-holder"><img onclick="slide(1)" class="right" src="rightarrow.png"></div>
+ 	</div>
+
+
+
+
+
+
+
+
+ 	<main>
+ 		<div class="container1">
+ 	    	<h1>LAUGHTER IS BRIGHTEST WHERE FOOD – AND COFFEE – ARE BEST</h1>
+ 	    	<p><img src="jobs-photo2.jpg" alt="Koffie">Espressobar Chavez is geïnspireerd op de café-cultuur van de Australiërs. Zij leven buiten de deur, ontmoeten elkaar in lokale koffiezaakjes. De koffie wordt er gezet door een traditionele barista, die de gasten graag helpt het perfecte kopje koffie te kiezen. Een cultuur naar ons hart, en precies dat is wat wij je ook brengen. Great coffee, great food. Dat is Espressobar Chavez. De kwaliteit proef je niet alleen in onze smaakvolle koffie(specials), maar het geldt voor alles wat uit onze eigen keuken komt. Broodjes, taarten, smoothies en sappen, van healthy tot sinner, alles altijd vers gemaakt. In onze espressobar kom je om bij te kletsen, te eten, drinken, werken, te genieten. Espressobar Hugo is je tweede huiskamer. Welkom!</p>
+ 	    </div>
+    
+    	<div class="container2">
+    		<h1>COFFEE IS OUR CUP OF TEA</h1>
+    		<p>Je vindt Espressobar Chavez in Gorinchem. Met zijn eigen charme en smaakvolle, krachtige koffie(specials), een keuken vol healthy, mooie producten om de lekkerste ontbijtjes, taarten en lunches te bereiden en een huiselijke sfeer.</p>
+    		<img src="jobs/img3.jpg" alt="Koffie">
+    	</div>
+    </main>
+ 
+	<footer><p>Copyright</p></footer>
+
+</body>
+</html>
